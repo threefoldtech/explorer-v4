@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Details - Grid4 Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Grid4 Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="farms.html" class="active">Farms</a></li>
+                    <li><a href="nodes.html">Nodes</a></li>
+                </ul>
+            </nav>
+            <div class="env-selector-container">
+                <span id="env-badge" class="env-badge">Development</span>
+                <select id="env-selector" title="Select environment">
+                    <option value="dev">Development</option>
+                    <option value="qa">QA</option>
+                    <option value="test">Test</option>
+                    <option value="prod">Production</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Farm Details</h2>
+            <a href="farms.html" class="btn-small">Back to Farms</a>
+        </section>
+
+        <section id="farm-details" class="details-container">
+            <div class="loading">Loading farm details...</div>
+        </section>
+
+        <section class="related-data">
+            <h3>Farm Nodes</h3>
+            <div id="farm-nodes" class="data-list">
+                <div class="loading">Loading nodes...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Grid4 Dashboard</p>
+            <p id="api-status">API Status: Checking...</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/farm-details.js"></script>
+</body>
+</html>

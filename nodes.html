@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodes - Grid4 Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Grid4 Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="farms.html">Farms</a></li>
+                    <li><a href="nodes.html" class="active">Nodes</a></li>
+                </ul>
+            </nav>
+            <div class="env-selector-container">
+                <span id="env-badge" class="env-badge">Development</span>
+                <select id="env-selector" title="Select environment">
+                    <option value="dev">Development</option>
+                    <option value="qa">QA</option>
+                    <option value="test">Test</option>
+                    <option value="prod">Production</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Nodes</h2>
+            <div class="search-container">
+                <input type="number" id="node-id-search" placeholder="Search by node ID...">
+                <input type="number" id="farm-id-search" placeholder="Search by farm ID...">
+                <select id="status-filter">
+                    <option value="">All Statuses</option>
+                    <option value="up">Up</option>
+                    <option value="down">Down</option>
+                </select>
+                <button id="search-btn" class="btn-small">Search</button>
+                <button id="clear-btn" class="btn-small">Clear</button>
+            </div>
+        </section>
+
+        <section id="nodes-list" class="data-list">
+            <div class="loading">Loading nodes...</div>
+        </section>
+
+        <div class="pagination">
+            <button id="prev-page" class="btn-small" disabled>Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page" class="btn-small">Next</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Grid4 Dashboard</p>
+            <p id="api-status">API Status: Checking...</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/nodes.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid4 Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Grid4 Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="farms.html">Farms</a></li>
+                    <li><a href="nodes.html">Nodes</a></li>
+                </ul>
+            </nav>
+            <div class="env-selector-container">
+                <span id="env-badge" class="env-badge">Development</span>
+                <select id="env-selector" title="Select environment">
+                    <option value="dev">Development</option>
+                    <option value="qa">QA</option>
+                    <option value="test">Test</option>
+                    <option value="prod">Production</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Welcome to the Grid4 Dashboard</h2>
+            <p>Explore information about farms and nodes on the Grid4 network.</p>
+            <div class="cta-buttons">
+                <a href="farms.html" class="btn">View Farms</a>
+                <a href="nodes.html" class="btn">View Nodes</a>
+            </div>
+        </section>
+
+        <section class="info-cards">
+            <div class="card" id="farms-stats">
+                <h3>Farms</h3>
+                <p>Browse and search for farms on the Grid4 network. View detailed information about each farm.</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-value" id="farms-count">-</span>
+                        <span class="stat-label">Total Farms</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="nodes-stats">
+                <h3>Nodes</h3>
+                <p>Browse and search for nodes on the Grid4 network. View detailed information about each node.</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-value" id="nodes-count">-</span>
+                        <span class="stat-label">Total Nodes</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="resources-stats">
+                <h3>Resources</h3>
+                <p>Total resources available on the Grid4 network.</p>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-value" id="total-cru">-</span>
+                        <span class="stat-label">CPU Cores</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="total-mru">-</span>
+                        <span class="stat-label">Memory</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="total-sru">-</span>
+                        <span class="stat-label">SSD Storage</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="total-hru">-</span>
+                        <span class="stat-label">HDD Storage</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Grid4 Dashboard</p>
+            <p id="api-status">API Status: Checking...</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
