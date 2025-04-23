@@ -78,7 +78,7 @@ const apiService = {
         // Get farm details by ID
         async getById(farmId) {
             try {
-                const response = await fetch(`${getApiBaseUrl()}/farms/${farmId}/`);
+                const response = await fetch(`${getApiBaseUrl()}/farms/${farmId}`);
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
@@ -120,7 +120,7 @@ const apiService = {
         // Get node details by ID
         async getById(nodeId) {
             try {
-                const response = await fetch(`${getApiBaseUrl()}/nodes/${nodeId}/`);
+                const response = await fetch(`${getApiBaseUrl()}/nodes/${nodeId}`);
 
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
