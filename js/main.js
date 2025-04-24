@@ -33,17 +33,16 @@ function initEnvironmentSelector() {
     const envSelector = document.getElementById('env-selector');
     if (!envSelector) return;
 
-    // Clear existing options
-    envSelector.innerHTML = '';
+    // Get the current environment from localStorage
+    const storedEnv = localStorage.getItem('grid4_environment') || 'prod';
 
-    // Add options for each environment
-    Object.keys(ENVIRONMENTS).forEach(env => {
-        const option = document.createElement('option');
-        option.value = env;
-        option.textContent = ENVIRONMENTS[env].name;
-        option.selected = env === currentEnv;
-        envSelector.appendChild(option);
-    });
+    // Set the current environment
+    if (ENVIRONMENTS[storedEnv]) {
+        currentEnv = storedEnv;
+    }
+
+    // Set the selector value directly
+    envSelector.value = currentEnv;
 
     // Add change event listener
     envSelector.addEventListener('change', function() {
@@ -65,12 +64,21 @@ function updateEnvironmentDisplay() {
     // Update environment badge
     const envBadge = document.getElementById('env-badge');
     if (envBadge) {
+        // Set the badge text to the environment name
         envBadge.textContent = ENVIRONMENTS[currentEnv].name;
 
-        // Update badge color based on environment
+        // Remove all environment classes
         envBadge.className = 'env-badge';
+
+        // Add the current environment class
         envBadge.classList.add(`env-${currentEnv}`);
+
+        // Log the current environment for debugging
+        console.log('Current environment:', currentEnv, ENVIRONMENTS[currentEnv].name);
     }
+
+    // Store the current environment in localStorage
+    localStorage.setItem('grid4_environment', currentEnv);
 }
 
 // Function to test API connection

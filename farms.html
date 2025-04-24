@@ -18,12 +18,12 @@
                 </ul>
             </nav>
             <div class="env-selector-container">
-                <span id="env-badge" class="env-badge">Development</span>
+                <span id="env-badge" class="env-badge">Production</span>
                 <select id="env-selector" title="Select environment">
                     <option value="dev">Development</option>
                     <option value="qa">QA</option>
                     <option value="test">Test</option>
-                    <option value="prod">Production</option>
+                    <option value="prod" selected>Production</option>
                 </select>
             </div>
         </div>
@@ -40,8 +40,42 @@
             </div>
         </section>
 
-        <section id="farms-list" class="data-list">
-            <div class="loading">Loading farms...</div>
+        <section id="farms-table-container" class="table-container">
+            <div class="table-controls">
+                <div class="table-info">
+                    <span id="farms-count">0</span> farms found
+                </div>
+                <div class="table-page-size">
+                    <label for="page-size-select">Show:</label>
+                    <select id="page-size-select">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                    <span>entries</span>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table id="farms-table" class="data-table">
+                    <thead>
+                        <tr>
+                            <th class="sortable" data-sort="farm_id">Farm ID</th>
+                            <th class="sortable" data-sort="farm_name">Farm Name</th>
+                            <th class="sortable" data-sort="twin_id">Twin ID</th>
+                            <th class="sortable" data-sort="created_at">Created</th>
+                            <th class="sortable" data-sort="updated_at">Updated</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="farms-list">
+                        <tr>
+                            <td colspan="6" class="loading">Loading farms...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <div class="pagination">

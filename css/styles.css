@@ -176,6 +176,121 @@ button:disabled {
     margin-bottom: 1.5rem;
 }
 
+/* Table Styles */
+.table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.table-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.table-info {
+    font-weight: bold;
+}
+
+.table-page-size {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.table-page-size select {
+    padding: 0.3rem;
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.data-table th,
+.data-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.data-table th {
+    background-color: var(--light-gray);
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+.data-table tbody tr:hover {
+    background-color: var(--light-gray);
+}
+
+.data-table .loading,
+.data-table .error,
+.data-table .no-results {
+    padding: 2rem;
+    text-align: center;
+    color: var(--dark-gray);
+}
+
+.sortable {
+    cursor: pointer;
+    position: relative;
+}
+
+.sortable:after {
+    content: '⇅';
+    position: absolute;
+    right: 8px;
+    color: var(--dark-gray);
+    font-size: 0.8rem;
+}
+
+.sortable.sort-asc:after {
+    content: '↑';
+    color: var(--primary-color);
+}
+
+.sortable.sort-desc:after {
+    content: '↓';
+    color: var(--primary-color);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Resource Pills */
+.resource-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.resource-pill {
+    background-color: var(--light-gray);
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
 /* Stats Container */
 .stats-container {
     display: flex;
