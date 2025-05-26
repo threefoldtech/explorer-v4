@@ -183,7 +183,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         nodes.forEach(node => {
             // Determine node status
-            const isHealthy = node.uptime && node.uptime.length > 0;
+            const isHealthy = node.online === true;
+            console.log(isHealthy, node.id);
             const statusClass = isHealthy ? 'status-up' : 'status-down';
             const statusText = isHealthy ? 'Up' : 'Down';
 

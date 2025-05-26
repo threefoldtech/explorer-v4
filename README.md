@@ -31,8 +31,8 @@ Grid4 Dashboard is a simple, lightweight web application built with vanilla HTML
 
 The application integrates with the Grid4 Registrar API:
 
-- Farms API: `https://registrar.[env].grid.tf/api/v1/farms/`
-- Nodes API: `https://registrar.[env].grid.tf/api/v1/nodes/`
+- Farms API: `https://registrar.[env].grid.tf/api/v1/farms`
+- Nodes API: `https://registrar.[env].grid.tf/api/v1/nodes`
 
 Where `[env]` can be:
 - `dev4` - Development environment

@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             nodeElement.className = 'data-item';
             
             // Determine node status
-            const isHealthy = node.uptime && node.uptime.length > 0;
+            const isHealthy = node.online===true;
             const statusClass = isHealthy ? 'status-up' : 'status-down';
             const statusText = isHealthy ? 'Up' : 'Down';
             

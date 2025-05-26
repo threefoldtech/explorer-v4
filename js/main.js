@@ -92,7 +92,7 @@ async function testApiConnection() {
 
     try {
         const startTime = performance.now();
-        const response = await fetch(`${getApiBaseUrl()}/farms/?page=1&size=1`);
+        const response = await fetch(`${getApiBaseUrl()}/farms?page=1&size=1`);
         const endTime = performance.now();
 
         if (response.ok) {
@@ -134,7 +134,7 @@ async function loadStats() {
 
     try {
         // Fetch farms
-        const farmsResponse = await fetch(`${getApiBaseUrl()}/farms/?page=1&size=1000`);
+        const farmsResponse = await fetch(`${getApiBaseUrl()}/farms?page=1&size=1000`);
         if (farmsResponse.ok) {
             const farms = await farmsResponse.json();
 
@@ -147,7 +147,7 @@ async function loadStats() {
         }
 
         // Fetch nodes
-        const nodesResponse = await fetch(`${getApiBaseUrl()}/nodes/?page=1&size=1000`);
+        const nodesResponse = await fetch(`${getApiBaseUrl()}/nodes?page=1&size=1000`);
         if (nodesResponse.ok) {
             const nodes = await nodesResponse.json();
 

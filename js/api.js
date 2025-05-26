@@ -56,7 +56,7 @@ const apiService = {
         // Get farms list with optional filters
         async getList(page = 1, size = 10, filters = {}) {
             try {
-                let url = `${getApiBaseUrl()}/farms/?page=${page}&size=${size}`;
+                let url = `${getApiBaseUrl()}/farms?page=${page}&size=${size}`;
 
                 // Add filters if provided
                 if (filters.farm_name) url += `&farm_name=${encodeURIComponent(filters.farm_name)}`;
@@ -96,7 +96,7 @@ const apiService = {
         // Get nodes list with optional filters
         async getList(page = 1, size = 10, filters = {}) {
             try {
-                let url = `${getApiBaseUrl()}/nodes/?page=${page}&size=${size}`;
+                let url = `${getApiBaseUrl()}/nodes?page=${page}&size=${size}`;
 
                 // Add filters if provided
                 if (filters.node_id) url += `&node_id=${filters.node_id}`;
@@ -135,7 +135,7 @@ const apiService = {
         // Get nodes by farm ID
         async getByFarmId(farmId, page = 1, size = 10) {
             try {
-                const url = `${getApiBaseUrl()}/nodes/?farm_id=${farmId}&page=${page}&size=${size}`;
+                const url = `${getApiBaseUrl()}/nodes?farm_id=${farmId}&page=${page}&size=${size}`;
 
                 const response = await fetch(url);
 
